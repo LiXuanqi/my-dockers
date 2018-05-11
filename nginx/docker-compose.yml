@@ -4,7 +4,8 @@ services:
     image: nginx
     volumes:
       - ./conf.d/:/etc/nginx/conf.d/
+      - /root/www/:/www/
     ports:
-      - "8080:80"
+      - "80:80"
     command: /bin/bash -c "nginx -g 'daemon off;'"
     
