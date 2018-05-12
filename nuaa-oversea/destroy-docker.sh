@@ -12,7 +12,7 @@ docker rmi nuaa-oversea_web
 
 
 rm -rf web/code/*
-rm -rf web/code/ .*
+rm -rf web/code/.*
 
 rm -rf tmp/*
 
