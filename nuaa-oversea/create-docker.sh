@@ -11,8 +11,5 @@ set -e
 
 # =============================================================================
 echo "正在为 NuaaOversea 创建运行环境."
-docker-compose up
+docker-compose build --no-cache && docker-compose up
 echo "运行 ./init_database.sh 初始化数据库"
-
-
-# docker-compose build --no-cache && docker-compose up
