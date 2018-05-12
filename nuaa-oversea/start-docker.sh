@@ -7,4 +7,4 @@
 #         WHAT YOU ARE DOING AND HOW THE SCRIPT WILL PERFORM.
 # =============================================================================
 
-docker-compose start
+docker-compose up
