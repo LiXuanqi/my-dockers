@@ -8,7 +8,8 @@
 # =============================================================================
 
 docker-compose down
-docker rmi nuaaoversea_web
+docker rmi nuaa-oversea_web
 
 # rm -rf database/mariadb/*
-
+rm -rf web/code/*
+rm -rf tmp/*
