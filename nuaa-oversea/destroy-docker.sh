@@ -10,6 +10,11 @@
 docker-compose down
 docker rmi nuaa-oversea_web
 
-# rm -rf database/mariadb/*
+
 rm -rf web/code/*
+rm -rf web/code/.*
+
 rm -rf tmp/*
+
+# ask whether to delete db data.
+# rm -rf database/mariadb/*
