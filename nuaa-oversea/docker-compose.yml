@@ -6,21 +6,15 @@ services:
       - "${WEB_PORT}:5000"
     volumes:
       - ./web/code:/code
-      - ./tmp:/tmp
     networks: 
       - backend
     depends_on:
-      - redis
       - db
     environment:
       DB_DATABASE: ${MYSQL_DATABASE}
       DB_USER: ${MYSQL_USER}
       DB_PASSWORD: ${MYSQL_PASSWORD}
-      
-  redis:
-    image: "redis:latest"
-    networks: 
-      - backend
+      ROOT_URL: ${ROOT_URL}
 
   db:
     image: mariadb
@@ -35,18 +29,6 @@ services:
     networks:
       - backend
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-
-  nginx:
-    image: nginx
-    volumes:
-      - ./conf.d/:/etc/nginx/conf.d/
-      - ./tmp:/tmp
-      - /root/www/:/www/
-    ports:
-      - "80:80"
-    networks:
-      - backend
-    command: /bin/bash -c "nginx -g 'daemon off;'"
 
 networks: 
   backend:
