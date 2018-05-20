@@ -7,5 +7,3 @@
 #         WHAT YOU ARE DOING AND HOW THE SCRIPT WILL PERFORM.
 # =============================================================================
 set -e 
-
-docker-compose run web python /code/init_database.py
